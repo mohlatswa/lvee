@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LVEE General Services | Electrical, Plumbing & Electronics</title>
-<meta name="description" content="LVEE General Services (Pty) Ltd — certified electrical installations, COCs, solar & backup power, plumbing, geysers, CCTV, alarms and electronics repairs. Residential, commercial & industrial.">
+<meta name="description" content="LVEE General Services (Pty) Ltd: certified electrical installations, COCs, solar and backup power, plumbing, geysers, CCTV, alarms and electronics repairs.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -329,6 +329,52 @@ footer .logo-text small{color:#86a596}
   .hero{padding:64px 0 110px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* multi-page additions */
+.menu a.active:not(.btn){color:var(--navy);font-weight:600}
+.menu a.active:not(.btn)::after{width:100%}
+.page-hero{position:relative;background:radial-gradient(1200px 600px at 85% -10%,#1d5a3e 0%,transparent 60%),radial-gradient(800px 500px at -10% 110%,#123828 0%,transparent 60%),var(--navy);color:#fff;padding:76px 0 68px;overflow:hidden}
+.page-hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at 70% 40%,#000 20%,transparent 70%)}
+.page-hero .wrap{position:relative}
+.crumb{font-size:.85rem;color:#9fc2b0;display:flex;gap:.5rem;align-items:center}
+.crumb a:hover{color:var(--amber)}
+.page-hero h1{font-size:clamp(2.1rem,4.6vw,3.3rem);margin:.8rem 0 .8rem;font-weight:800}
+.page-hero h1 em{font-style:normal;color:var(--amber)}
+.page-hero p{color:#c4dccf;font-size:1.12rem;max-width:640px}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.cat{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.8rem;transition:transform .3s,box-shadow .3s}
+.cat:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.cat .ic{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;margin-bottom:1.1rem}
+.cat .ic svg{width:26px;height:26px}
+.cat h3{font-size:1.15rem;margin-bottom:.5rem}
+.cat p{color:var(--muted);font-size:.94rem;flex:1}
+.cat span{margin-top:1.1rem;color:var(--blue);font-weight:600;font-size:.92rem}
+.cat.main{background:linear-gradient(160deg,var(--navy),var(--navy-3));border:0;color:#fff}
+.cat.main p{color:#c4dccf}.cat.main span{color:var(--amber)}
+.cat.main .ic{background:rgba(163,230,53,.15);color:var(--amber)}
+.teaser{display:flex;gap:2rem;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:24px;padding:2.4rem;box-shadow:var(--shadow)}
+.teaser h2{font-size:clamp(1.5rem,2.8vw,2rem);margin:.5rem 0 .6rem}
+.teaser p{color:var(--muted);max-width:620px}
+.mini-db{display:flex;gap:.5rem;padding:1rem;background:var(--navy);border-radius:16px}
+.mini-db i{width:26px;height:46px;border-radius:6px;background:#dfe6e2;position:relative}
+.mini-db i::before{content:"";position:absolute;left:4px;right:4px;top:4px;height:42%;border-radius:4px;background:var(--amber)}
+.mini-db i.t::before{top:auto;bottom:4px;background:#ef4444}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:start}
+.about-grid h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin:.6rem 0 1rem}
+.about-grid p{color:var(--muted);font-size:1.04rem;margin-bottom:1rem}
+.values{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.values span{padding:.5rem 1rem;border-radius:999px;background:#e3f7ee;color:#065f46;font-weight:600;font-size:.88rem}
+.dir-card{background:linear-gradient(160deg,var(--navy),var(--navy-3));color:#fff;border-radius:24px;padding:2.2rem;text-align:center;box-shadow:var(--shadow)}
+.avatar{width:96px;height:96px;margin:0 auto 1.1rem;border-radius:50%;display:grid;place-items:center;font:800 2rem Sora,sans-serif;color:var(--navy);background:var(--amber);box-shadow:0 0 0 6px rgba(163,230,53,.18)}
+.dir-card h3{font-size:1.3rem}
+.dir-card .role{color:var(--amber);font-weight:600;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
+.dir-card p{color:#c4dccf;font-size:.95rem;margin:1rem 0 1.4rem}
+.dir-card .btns{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap}
+.svc-link{display:inline-flex;gap:.35rem;align-items:center;margin-top:1.2rem;font-weight:600;font-size:.9rem;color:var(--blue)}
+.svc.feature .svc-link{color:var(--amber)}
+.svc-link:hover{text-decoration:underline}
+@media (max-width:1000px){.cat-grid{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr}}
+@media (max-width:640px){.cat-grid{grid-template-columns:1fr}.page-hero{padding:56px 0 52px}.teaser{padding:1.6rem}}
 </style>
 </head>
 <body>
@@ -379,24 +425,23 @@ footer .logo-text small{color:#86a596}
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="#top" class="logo" aria-label="LVEE General Services home">
+    <a href="index.html" class="logo" aria-label="LVEE General Services home">
       <span class="logo-mark"><svg viewBox="0 0 48 48"><use href="#i-logo"/></svg></span>
       <span class="logo-text"><b>LV<span style="color:var(--blue)">EE</span></b><small>General Services</small></span>
     </a>
     <nav class="menu" id="menu">
-      <a href="#services">Services</a>
-      <a href="#electrical">Electrical</a>
-      <a href="#process">How we work</a>
-      <a href="#why">Why LVEE</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn-navy">Get a free quote</a>
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="electrical.html">Electrical</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html" class="btn btn-navy">Get a free quote</a>
     </nav>
     <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <main id="top">
-<!-- HERO -->
 <section class="hero">
   <div class="wrap">
     <div>
@@ -404,7 +449,7 @@ footer .logo-text small{color:#86a596}
       <h1>Power you can <em>trust</em>.<br>Service you can count on.</h1>
       <p class="lead">LVEE General Services is your one-stop technical team. We specialise in safe, certified electrical work, and we also handle your plumbing, electronics and general maintenance, so one call gets it all done.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-amber">Request a quote <svg><use href="#i-arrow"/></svg></a>
+        <a href="contact.html" class="btn btn-amber">Request a quote <svg><use href="#i-arrow"/></svg></a>
         <a href="#" class="btn btn-ghost" data-cfg="wa"><svg><use href="#i-wa"/></svg> WhatsApp us</a>
       </div>
       <div class="hero-stats">
@@ -431,7 +476,6 @@ footer .logo-text small{color:#86a596}
   <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none"><path fill="#fff" d="M0 40c240 30 480 30 720 10s480-40 720-10v30H0z"/></svg>
 </section>
 
-<!-- TRUST -->
 <section class="trust">
   <div class="wrap">
     <div class="trust-grid rv">
@@ -443,162 +487,38 @@ footer .logo-text small{color:#86a596}
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services">
+<section>
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">What we do</span>
-      <h2>One team for every technical job on your property</h2>
-      <p>Electrical work is our core strength. Around it we've built a full service offering, so you don't need to juggle five different contractors.</p>
+      <h2>Electrical first. Everything else, sorted.</h2>
+      <p>Electricity is our speciality, and our team also covers plumbing, electronics, security and maintenance, so you only need one contractor.</p>
     </div>
-
-    <div class="tabs rv" role="tablist">
-      <button class="tab active" data-filter="all"><svg><use href="#i-tools"/></svg>All services</button>
-      <button class="tab" data-filter="el"><svg><use href="#i-bolt"/></svg>Electrical</button>
-      <button class="tab" data-filter="pl"><svg><use href="#i-drop"/></svg>Plumbing</button>
-      <button class="tab" data-filter="ec"><svg><use href="#i-chip"/></svg>Electronics &amp; Security</button>
-      <button class="tab" data-filter="gn"><svg><use href="#i-home"/></svg>General</button>
-    </div>
-
-    <div class="svc-grid" id="svcGrid">
-      <article class="svc feature rv" data-cat="el">
-        <span class="tag">Core service</span>
-        <div class="ic"><svg><use href="#i-bolt"/></svg></div>
-        <h3>Electrical Installations</h3>
-        <p>New builds, extensions, renovations and complete rewiring, done to code by qualified electricians.</p>
-        <ul><li>House &amp; office wiring</li><li>Plugs, switches &amp; isolators</li><li>Stove, geyser &amp; pool circuits</li></ul>
-      </article>
-      <article class="svc rv" data-cat="el">
-        <div class="ic el"><svg><use href="#i-cert"/></svg></div>
-        <h3>Certificates of Compliance</h3>
-        <p>Electrical COCs for property sales, insurance claims and new installations.</p>
-        <ul><li>Inspection &amp; testing</li><li>Remedial repairs</li><li>Fast turnaround for transfers</li></ul>
-      </article>
-      <article class="svc rv" data-cat="el">
-        <div class="ic el"><svg><use href="#i-board"/></svg></div>
-        <h3>DB Boards &amp; Fault Finding</h3>
-        <p>Tripping power, burning smells or dead circuits? We trace the fault and fix it safely.</p>
-        <ul><li>DB board upgrades</li><li>Earth leakage &amp; surge protection</li><li>Prepaid meter installs</li></ul>
-      </article>
-      <article class="svc rv" data-cat="el">
-        <div class="ic el"><svg><use href="#i-sun"/></svg></div>
-        <h3>Solar &amp; Backup Power</h3>
-        <p>Beat load shedding with inverters, batteries and solar PV sized for your real usage.</p>
-        <ul><li>Hybrid inverter systems</li><li>Lithium battery backup</li><li>Generator change-over switches</li></ul>
-      </article>
-      <article class="svc rv" data-cat="el">
-        <div class="ic el"><svg><use href="#i-bulb"/></svg></div>
-        <h3>Lighting Solutions</h3>
-        <p>Indoor, outdoor and security lighting that saves energy and looks great.</p>
-        <ul><li>LED retrofits</li><li>Garden &amp; perimeter lights</li><li>Sensors, timers &amp; dimmers</li></ul>
-      </article>
-      <article class="svc rv" data-cat="el">
-        <div class="ic el"><svg><use href="#i-factory"/></svg></div>
-        <h3>Commercial &amp; Industrial</h3>
-        <p>Three-phase installations, motor control and planned maintenance for businesses.</p>
-        <ul><li>3-phase supply &amp; reticulation</li><li>Motor starters &amp; controls</li><li>Maintenance contracts</li></ul>
-      </article>
-      <article class="svc rv" data-cat="pl">
-        <div class="ic pl"><svg><use href="#i-fire"/></svg></div>
-        <h3>Geysers &amp; Hot Water</h3>
-        <p>Burst geyser? We replace, repair and install, including solar and heat-pump geysers.</p>
-        <ul><li>Geyser replacement</li><li>Elements &amp; thermostats</li><li>Insurance-claim work</li></ul>
-      </article>
-      <article class="svc rv" data-cat="pl">
-        <div class="ic pl"><svg><use href="#i-pipe"/></svg></div>
-        <h3>Plumbing Repairs</h3>
-        <p>Leaks, blocked drains, taps, toilets and pipe work, sorted quickly and cleanly.</p>
-        <ul><li>Leak detection</li><li>Drain unblocking</li><li>Bathroom &amp; kitchen fittings</li></ul>
-      </article>
-      <article class="svc rv" data-cat="pl">
-        <div class="ic pl"><svg><use href="#i-drop"/></svg></div>
-        <h3>Water Backup Systems</h3>
-        <p>JoJo tanks, booster pumps and rainwater harvesting for when municipal water fails.</p>
-        <ul><li>Tank installation</li><li>Pressure pumps</li><li>Borehole connections</li></ul>
-      </article>
-      <article class="svc rv" data-cat="ec">
-        <div class="ic ec"><svg><use href="#i-cam"/></svg></div>
-        <h3>CCTV &amp; Alarm Systems</h3>
-        <p>Keep an eye on your property from your phone with HD cameras and smart alarms.</p>
-        <ul><li>IP &amp; analogue CCTV</li><li>Alarm &amp; beam sensors</li><li>Remote viewing setup</li></ul>
-      </article>
-      <article class="svc rv" data-cat="ec">
-        <div class="ic ec"><svg><use href="#i-gate"/></svg></div>
-        <h3>Gate Motors &amp; Electric Fencing</h3>
-        <p>Installation, repair and battery replacement for gates, garage doors and fences.</p>
-        <ul><li>Sliding &amp; swing gate motors</li><li>Electric fence energisers</li><li>Intercoms &amp; access control</li></ul>
-      </article>
-      <article class="svc rv" data-cat="ec">
-        <div class="ic ec"><svg><use href="#i-tv"/></svg></div>
-        <h3>Electronics &amp; Networking</h3>
-        <p>Appliance and electronics repairs, TV mounting, DStv and Wi-Fi network installs.</p>
-        <ul><li>Electronic repairs</li><li>TV &amp; DStv installation</li><li>Wi-Fi &amp; data cabling</li></ul>
-      </article>
-      <article class="svc rv" data-cat="gn">
-        <div class="ic gn"><svg><use href="#i-tools"/></svg></div>
-        <h3>General Maintenance</h3>
-        <p>Handyman, repairs and planned maintenance for homes, complexes and offices.</p>
-        <ul><li>Property maintenance plans</li><li>Painting &amp; minor building</li><li>Body corporate work</li></ul>
-      </article>
+    <div class="cat-grid">
+      <a class="cat main rv" href="services.html?cat=el"><div class="ic"><svg><use href="#i-bolt"/></svg></div><h3>Electrical</h3><p>Installations, COC certificates, DB boards, fault finding, lighting, solar and backup power.</p><span>View electrical services &rarr;</span></a>
+      <a class="cat rv" href="services.html?cat=pl"><div class="ic pl"><svg><use href="#i-drop"/></svg></div><h3>Plumbing</h3><p>Geysers, leaks, blocked drains, bathroom and kitchen fittings, water tanks and pumps.</p><span>View plumbing &rarr;</span></a>
+      <a class="cat rv" href="services.html?cat=ec"><div class="ic ec"><svg><use href="#i-cam"/></svg></div><h3>Electronics &amp; Security</h3><p>CCTV, alarms, gate motors, electric fencing, electronics repairs, TV and Wi-Fi.</p><span>View electronics &rarr;</span></a>
+      <a class="cat rv" href="services.html?cat=gn"><div class="ic gn"><svg><use href="#i-tools"/></svg></div><h3>General Maintenance</h3><p>Handyman work and planned maintenance for homes, complexes and offices.</p><span>View maintenance &rarr;</span></a>
     </div>
   </div>
 </section>
 
-<!-- ELECTRICAL FOCUS -->
-<section class="focus" id="electrical">
-  <div class="wrap">
-    <div class="rv">
-      <div class="panel">
-        <h4>Your distribution board (DB) <em><i class="dot"></i> Live</em></h4>
-        <p class="db-intro">All the electricity in your home is controlled from this box. <b style="color:#fff">Tap any switch</b> to see what it does.</p>
-        <div class="db">
-          <div class="db-cap">Safety devices</div>
-          <div class="db-top" id="dbTop"></div>
-          <div class="db-cap">Circuit breakers: one per area of your home</div>
-          <div class="db-circ" id="dbCirc"></div>
-        </div>
-        <div class="db-legend">
-          <span><i style="background:var(--amber)"></i>ON: power flowing</span>
-          <span><i style="background:#ef4444"></i>OFF or TRIPPED</span>
-          <span><i style="background:#94a3b8"></i>No power (main is off)</span>
-        </div>
-        <div class="db-info" id="dbInfo"></div>
-        <div class="panel-foot"><span>Circuits with power</span><b id="onCount"></b></div>
-        <div class="meter"><span id="meter"></span></div>
-        <div class="db-btns"><button type="button" id="dbFault">&#9889; Simulate a fault</button><button type="button" id="dbReset">Reset all</button></div>
+<section class="focus" style="padding:72px 0">
+  <div class="wrap" style="display:block">
+    <div class="teaser rv">
+      <div>
+        <span class="eyebrow">Interactive</span>
+        <h2>Do you understand your DB board?</h2>
+        <p>Try our interactive distribution board. Flip the switches, test the earth leakage and see what happens when a breaker trips, explained in plain English.</p>
       </div>
-    </div>
-    <div class="rv">
-      <span class="eyebrow">Electrical specialists</span>
-      <h2 style="font-size:clamp(1.9rem,3.6vw,2.6rem);margin:.6rem 0 1rem">Electricity is our speciality, and safety is how we do it.</h2>
-      <p style="color:var(--muted);font-size:1.05rem">Bad wiring is one of the leading causes of house fires. Every LVEE electrical job is done by qualified electricians, tested properly and signed off with the right paperwork.</p>
-      <div class="checklist">
-        <div><i><svg><use href="#i-cert"/></svg></i><p><b>Registered &amp; certified</b><span>We issue valid Certificates of Compliance for installations and property transfers.</span></p></div>
-        <div><i><svg><use href="#i-search"/></svg></i><p><b>Proper fault diagnosis</b><span>We find the root cause instead of just resetting the trip switch.</span></p></div>
-        <div><i><svg><use href="#i-battery"/></svg></i><p><b>Load-shedding ready</b><span>Inverter, battery and solar systems that are installed and certified correctly.</span></p></div>
+      <div style="display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap">
+        <div class="mini-db" aria-hidden="true"><i></i><i></i><i class="t"></i><i></i><i></i></div>
+        <a href="electrical.html" class="btn btn-navy">Try it now <svg><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROCESS -->
-<section id="process">
-  <div class="wrap">
-    <div class="sec-head center rv">
-      <span class="eyebrow">How we work</span>
-      <h2>Simple, transparent, done right</h2>
-      <p>From your first message to the final sign-off, you'll always know what's happening and what it costs.</p>
-    </div>
-    <div class="steps">
-      <div class="step rv"><h3>Contact us</h3><p>Call, WhatsApp or send the quote form. Tell us what's wrong or what you need.</p></div>
-      <div class="step rv"><h3>Site assessment</h3><p>We inspect the job, on site or from photos, and explain the options.</p></div>
-      <div class="step rv"><h3>Clear quotation</h3><p>You get a written, itemised quote. No surprises and no hidden call-out costs.</p></div>
-      <div class="step rv"><h3>Work &amp; sign-off</h3><p>We complete the job, test everything, clean up and issue certificates where needed.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTORS -->
 <section class="sectors">
   <div class="wrap">
     <div class="sec-head rv">
@@ -614,99 +534,6 @@ footer .logo-text small{color:#86a596}
   </div>
 </section>
 
-<!-- WHY -->
-<section class="why" id="why">
-  <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow">Why choose LVEE</span>
-      <h2 style="font-size:clamp(1.9rem,3.6vw,2.6rem);margin:.6rem 0 1rem">A contractor you'll want to call again</h2>
-      <p style="color:var(--muted);font-size:1.05rem">We're a proudly South African company built on honest work. We show up on time, we explain what we do, and we stand behind every job.</p>
-      <p style="color:var(--muted);font-size:1.05rem;margin-top:1rem">Led by Director <b style="color:var(--ink)" data-text="director"></b>, every job gets hands-on attention from the top.</p>
-      <div class="emerg">
-        <i><svg><use href="#i-phone"/></svg></i>
-        <div><b>Electrical or plumbing emergency?</b>Call us any time on <a href="tel:" data-cfg="tel" data-text="phone"></a></div>
-      </div>
-    </div>
-    <div class="why-grid">
-      <div class="why-card rv"><i><svg><use href="#i-user"/></svg></i><h3>Qualified technicians</h3><p>Trained, experienced and trade-tested people work on your property.</p></div>
-      <div class="why-card rv"><i><svg><use href="#i-tag"/></svg></i><h3>Honest pricing</h3><p>Free written quotes with every item listed. You approve the quote before we start.</p></div>
-      <div class="why-card rv"><i><svg><use href="#i-clock"/></svg></i><h3>On time, every time</h3><p>We arrive when we say we will, and we keep you updated on progress.</p></div>
-      <div class="why-card rv"><i><svg><use href="#i-shield"/></svg></i><h3>Workmanship guarantee</h3><p>Quality materials, neat finishes and a warranty on our labour.</p></div>
-      <div class="why-card rv"><i><svg><use href="#i-broom"/></svg></i><h3>Clean &amp; respectful</h3><p>We protect your space and leave it cleaner than we found it.</p></div>
-      <div class="why-card rv"><i><svg><use href="#i-tools"/></svg></i><h3>Multi-skilled team</h3><p>Electrical, plumbing and electronics from one company with one point of contact.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="wrap">
-    <div class="sec-head center rv">
-      <span class="eyebrow">FAQ</span>
-      <h2>Questions we get asked a lot</h2>
-    </div>
-    <div class="faq-list rv">
-      <details open><summary>Do you issue Electrical Certificates of Compliance (COC)?</summary><p>Yes. We inspect and test your installation, fix anything that doesn't comply, and issue a valid COC. This is often needed when selling a property, for insurance, or after new electrical work.</p></details>
-      <details><summary>Are your quotes really free?</summary><p>Yes. Quotes are free and itemised. For fault-finding call-outs we will tell you the call-out fee before we come out, so you're never surprised.</p></details>
-      <details><summary>Can you help with load shedding?</summary><p>Absolutely. We design and install inverter, battery and solar systems sized to what you actually need to keep running, and we certify the installation.</p></details>
-      <details><summary>Do you handle geyser insurance claims?</summary><p>Yes. We can assess burst geysers, give your insurer the report and quote they need, and do the replacement, including the electrical COC for the geyser circuit.</p></details>
-      <details><summary>Do you only do electrical work?</summary><p>Electrical is our speciality, but we also do plumbing, CCTV and alarms, gate motors, electronics repairs, TV and network installs, and general maintenance.</p></details>
-      <details><summary>Which areas do you service?</summary><p><span data-text="area"></span> Contact us with your location and we'll confirm availability.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="c-info rv">
-      <span class="eyebrow" style="color:var(--amber)">Get in touch</span>
-      <h2>Let's get it fixed.</h2>
-      <p>Tell us about your job and we'll get back to you quickly with advice and a free quote.</p>
-      <div class="c-row"><i><svg><use href="#i-user"/></svg></i><div><small>Director</small><span data-text="director"></span></div></div>
-      <div class="c-row"><i><svg><use href="#i-phone"/></svg></i><div><small>Call us</small><a href="tel:" data-cfg="tel" data-text="phone"></a></div></div>
-      <div class="c-row"><i><svg><use href="#i-wa"/></svg></i><div><small>WhatsApp</small><a href="#" data-cfg="wa" data-text="whatsappDisplay"></a></div></div>
-      <div class="c-row"><i><svg><use href="#i-mail"/></svg></i><div><small>Email</small><a href="mailto:" data-cfg="mail" data-text="email"></a></div></div>
-      <div class="c-row"><i><svg><use href="#i-pin"/></svg></i><div><small>Location</small><span data-text="address"></span></div></div>
-      <div class="hours">
-        <div><span>Mon – Fri</span><span>07:30 – 17:30</span></div>
-        <div><span>Saturday</span><span>08:00 – 13:00</span></div>
-        <div><span>Emergencies</span><span style="color:var(--amber);font-weight:600">24/7</span></div>
-      </div>
-    </div>
-
-    <form class="quote rv" id="quoteForm" novalidate>
-      <h3>Request a free quote</h3>
-      <p>Fill in the details below. Your message opens in WhatsApp or email, ready to send.</p>
-      <div class="f-grid">
-        <div><label for="qName">Full name *</label><input id="qName" required placeholder="e.g. Thabo Mokoena"></div>
-        <div><label for="qPhone">Phone number *</label><input id="qPhone" type="tel" required placeholder="e.g. 072 123 4567"></div>
-        <div class="full"><label>Service needed *</label>
-          <div class="chips" id="qService">
-            <label><input type="radio" name="svc" value="Electrical" checked><span>Electrical</span></label>
-            <label><input type="radio" name="svc" value="COC Certificate"><span>COC</span></label>
-            <label><input type="radio" name="svc" value="Solar / Backup power"><span>Solar / Backup</span></label>
-            <label><input type="radio" name="svc" value="Plumbing / Geyser"><span>Plumbing / Geyser</span></label>
-            <label><input type="radio" name="svc" value="CCTV / Alarms / Gates"><span>Security</span></label>
-            <label><input type="radio" name="svc" value="Electronics"><span>Electronics</span></label>
-            <label><input type="radio" name="svc" value="General maintenance"><span>Other</span></label>
-          </div>
-        </div>
-        <div><label for="qArea">Suburb / area</label><input id="qArea" placeholder="Where is the job?"></div>
-        <div><label for="qType">Property type</label>
-          <select id="qType"><option>Residential</option><option>Commercial</option><option>Industrial</option></select></div>
-        <div class="full"><label for="qMsg">Describe the job *</label><textarea id="qMsg" required placeholder="e.g. Trip switch keeps tripping when the kettle is on"></textarea></div>
-      </div>
-      <div class="f-actions">
-        <button type="submit" class="btn wa" data-via="wa"><svg><use href="#i-wa"/></svg> Send via WhatsApp</button>
-        <button type="submit" class="btn btn-navy" data-via="mail"><svg><use href="#i-mail"/></svg> Send via Email</button>
-      </div>
-      <p class="f-note" id="fNote">* Required fields. We'll never share your details.</p>
-    </form>
-  </div>
-</section>
-
-<!-- CTA BAND -->
 <section class="band">
   <div class="wrap">
     <div class="inner rv">
@@ -716,7 +543,7 @@ footer .logo-text small{color:#86a596}
       </div>
       <div style="display:flex;gap:.8rem;flex-wrap:wrap">
         <a href="tel:" data-cfg="tel" class="btn btn-amber"><svg><use href="#i-phone"/></svg> Call now</a>
-        <a href="#contact" class="btn btn-ghost">Get a quote</a>
+        <a href="contact.html" class="btn btn-ghost">Get a quote</a>
       </div>
     </div>
   </div>
@@ -727,14 +554,14 @@ footer .logo-text small{color:#86a596}
   <div class="wrap">
     <div class="f-cols">
       <div>
-        <a href="#top" class="logo" style="margin-bottom:1rem">
+        <a href="index.html" class="logo" style="margin-bottom:1rem">
           <span class="logo-mark"><svg viewBox="0 0 48 48"><use href="#i-logo"/></svg></span>
           <span class="logo-text"><b>LV<span style="color:var(--blue)">EE</span></b><small>General Services</small></span>
         </a>
         <p>Electrical specialists offering plumbing, electronics, security and general maintenance for homes and businesses.</p>
       </div>
-      <div><h4>Electrical</h4><ul><li><a href="#services">Installations</a></li><li><a href="#services">COC Certificates</a></li><li><a href="#services">Fault finding</a></li><li><a href="#services">Solar &amp; backup</a></li></ul></div>
-      <div><h4>Other services</h4><ul><li><a href="#services">Plumbing &amp; geysers</a></li><li><a href="#services">CCTV &amp; alarms</a></li><li><a href="#services">Gate motors</a></li><li><a href="#services">Electronics</a></li></ul></div>
+      <div><h4>Electrical</h4><ul><li><a href="services.html">Installations</a></li><li><a href="services.html">COC Certificates</a></li><li><a href="services.html">Fault finding</a></li><li><a href="services.html">Solar &amp; backup</a></li></ul></div>
+      <div><h4>Other services</h4><ul><li><a href="services.html">Plumbing &amp; geysers</a></li><li><a href="services.html">CCTV &amp; alarms</a></li><li><a href="services.html">Gate motors</a></li><li><a href="services.html">Electronics</a></li></ul></div>
       <div><h4>Contact</h4><ul><li>Director: <span data-text="director"></span></li><li><a href="tel:" data-cfg="tel" data-text="phone"></a></li><li><a href="mailto:" data-cfg="mail" data-text="email"></a></li><li data-text="address"></li></ul></div>
     </div>
   </div>
@@ -796,7 +623,8 @@ const cio = new IntersectionObserver(es => es.forEach(e => {
 }));
 document.querySelectorAll("[data-count]").forEach(el => cio.observe(el));
 
-// interactive DB board
+// interactive DB board (electrical page)
+if (document.getElementById("dbTop")) {
 const CIRCUITS = [
   { n: "Lights", a: "10A", d: "all the ceiling lights in the house", off: "The lights are off. This is the safe way to switch off before changing a light fitting." },
   { n: "Plugs", a: "20A", d: "the wall sockets in bedrooms and the lounge (TV, chargers, computers)", off: "The plugs in the bedrooms and lounge have no power." },
@@ -871,6 +699,7 @@ document.getElementById("dbReset").onclick = () => {
 };
 info(...ALL_ON);
 updateBoard();
+}
 
 // electric arcs around the hero core
 const arcs = document.querySelectorAll(".arcs polyline");
@@ -886,6 +715,7 @@ if (arcs.length && !matchMedia("(prefers-reduced-motion: reduce)").matches) setI
 
 // quote form
 const form = document.getElementById("quoteForm");
+if (form) {
 let via = "wa";
 form.querySelectorAll("[data-via]").forEach(b => b.onclick = () => via = b.dataset.via);
 form.onsubmit = e => {
@@ -903,6 +733,33 @@ form.onsubmit = e => {
   note.textContent = "Thank you! Your message is ready to send. We'll be in touch shortly.";
   note.style.color = "#16a34a";
 };
+
+// prefill from links like contact.html?service=Plumbing%20%2F%20Geyser&message=...
+const qs = new URLSearchParams(location.search);
+const pre = form.querySelector(`input[name=svc][value="${CSS.escape(qs.get("service") || "")}"]`);
+if (pre) pre.checked = true;
+if (qs.get("message")) document.getElementById("qMsg").value = qs.get("message");
+}
+
+// services page: open a category from services.html?cat=el
+const cat = new URLSearchParams(location.search).get("cat");
+if (cat) document.querySelector(`.tab[data-filter="${CSS.escape(cat)}"]`)?.click();
+
+// "Request a quote" link on every service card
+const QUOTE_SVC = { "Certificates of Compliance": "COC Certificate", "Solar & Backup Power": "Solar / Backup power", "Electronics & Networking": "Electronics" };
+const CAT_SVC = { el: "Electrical", pl: "Plumbing / Geyser", ec: "CCTV / Alarms / Gates", gn: "General maintenance" };
+document.querySelectorAll(".svc").forEach(c => {
+  const t = c.querySelector("h3").textContent;
+  const a = document.createElement("a");
+  a.className = "svc-link";
+  a.href = "contact.html?service=" + encodeURIComponent(QUOTE_SVC[t] || CAT_SVC[c.dataset.cat]) + "&message=" + encodeURIComponent("I need a quote for: " + t + "\n\n");
+  a.innerHTML = 'Request a quote <svg width="16" height="16"><use href="#i-arrow"/></svg>';
+  c.appendChild(a);
+});
+
+// old single-page links (index.html#services etc.) go to the new pages
+const OLD = { "#services": "services.html", "#electrical": "electrical.html", "#process": "about.html#process", "#why": "about.html#why", "#faq": "faq.html", "#contact": "contact.html" };
+if (OLD[location.hash] && !document.querySelector(location.hash)) location.replace(OLD[location.hash]);
 </script>
 </body>
 </html>
