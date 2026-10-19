@@ -81,8 +81,22 @@ header.nav.scrolled{border-color:var(--line);box-shadow:0 8px 30px -18px rgba(20
 .hero-art .ring.r2{inset:12%;border-style:solid;border-color:rgba(15,159,149,.25);animation-duration:60s;animation-direction:reverse}
 @keyframes spin{to{transform:rotate(360deg)}}
 .hero-core{position:absolute;inset:24%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#3b404b,#15171c 70%);box-shadow:0 0 0 10px rgba(255,255,255,.03),0 0 90px rgba(255,107,26,.25),inset 0 0 40px rgba(0,0,0,.4);display:grid;place-items:center}
-.hero-core svg{width:46%;filter:drop-shadow(0 0 22px rgba(255,107,26,.75));animation:flick 3.5s infinite}
+.hero-core .bolt{width:46%;margin-top:-14%;filter:drop-shadow(0 0 22px rgba(255,107,26,.75));animation:flick 3.5s infinite}
 @keyframes flick{0%,100%{opacity:1}47%{opacity:1}48%{opacity:.6}50%{opacity:1}52%{opacity:.75}53%{opacity:1}}
+.hero-glow{position:absolute;inset:26%;border-radius:50%;background:var(--amber);filter:blur(50px);opacity:.25;animation:hum 2.6s ease-in-out infinite}
+@keyframes hum{50%{opacity:.45;transform:scale(1.08)}}
+.circuit,.arcs{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.traces path{stroke:rgba(255,255,255,.14);stroke-width:2;stroke-linejoin:round}
+.pulses path{stroke:var(--amber);stroke-width:3;stroke-linecap:round;stroke-dasharray:12 100;stroke-dashoffset:12;filter:drop-shadow(0 0 4px var(--amber));animation:current 2.4s linear infinite}
+@keyframes current{to{stroke-dashoffset:-100}}
+.pads circle{fill:var(--navy);stroke:var(--amber);stroke-width:2}
+.pads rect{fill:var(--navy-3);stroke:rgba(255,255,255,.25);stroke-width:1.5}
+.arcs polyline{stroke:#fff;stroke-width:1.6;stroke-linejoin:round;filter:drop-shadow(0 0 3px var(--amber)) drop-shadow(0 0 8px var(--amber))}
+.hero-core{overflow:hidden}
+.hero-core .sig{position:absolute;left:0;top:60%;width:200%;height:16%;animation:sig 1.6s linear infinite}
+.sig path{stroke:var(--cyan);stroke-width:2;fill:none;vector-effect:non-scaling-stroke;opacity:.8}
+@keyframes sig{to{transform:translateX(-50%)}}
+.volt{position:absolute;bottom:13%;left:0;right:0;text-align:center;font:600 .68rem/1 ui-monospace,Consolas,monospace;letter-spacing:.12em;color:rgba(255,255,255,.55)}
 .orb{position:absolute;display:flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.96);color:var(--ink);padding:.7rem .95rem;border-radius:14px;box-shadow:var(--shadow);font-size:.85rem;font-weight:600;animation:float 6s ease-in-out infinite}
 .orb i{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-style:normal}
 .orb i svg{width:18px;height:18px}
@@ -285,7 +299,8 @@ footer .logo-text small{color:#8d9099}
   .trust-grid div:last-child{border-bottom:0}
   .topbar .hide-sm{display:none}
   .orb{font-size:.75rem;padding:.55rem .7rem}
-  .orb.o1{left:0}.orb.o2{right:0}
+  .orb small{display:none}
+  .orb.o1{left:0;top:2%}.orb.o2{right:0;top:2%}
   .band .inner,.c-info,form.quote{padding:1.8rem}
   .hero{padding:64px 0 110px}
 }
@@ -375,8 +390,15 @@ footer .logo-text small{color:#8d9099}
       </div>
     </div>
     <div class="hero-art" aria-hidden="true">
+      <div class="hero-glow"></div>
       <div class="ring"></div><div class="ring r2"></div>
-      <div class="hero-core"><svg viewBox="0 0 24 24" style="color:var(--amber)"><use href="#i-bolt"/></svg></div>
+      <svg class="circuit" viewBox="0 0 400 400" fill="none"><g class="traces"><path d="M200 96V60H140V20"/><path d="M200 304V340H260V380"/><path d="M96 200H50V140H14"/><path d="M304 200H350V260H386"/><path d="M126 126L96 96H50V70"/><path d="M274 126L304 96H350V60"/><path d="M126 274L96 304V350H60"/><path d="M274 274L304 304H340V350"/></g><g class="pulses"><path d="M200 96V60H140V20" pathLength="100" style="animation-delay:-0.00s;animation-duration:2.0s"/><path d="M200 304V340H260V380" pathLength="100" style="animation-delay:-0.37s;animation-duration:2.5s"/><path d="M96 200H50V140H14" pathLength="100" style="animation-delay:-0.74s;animation-duration:3.0s"/><path d="M304 200H350V260H386" pathLength="100" style="animation-delay:-1.11s;animation-duration:2.0s"/><path d="M126 126L96 96H50V70" pathLength="100" style="animation-delay:-1.48s;animation-duration:2.5s"/><path d="M274 126L304 96H350V60" pathLength="100" style="animation-delay:-1.85s;animation-duration:3.0s"/><path d="M126 274L96 304V350H60" pathLength="100" style="animation-delay:-2.22s;animation-duration:2.0s"/><path d="M274 274L304 304H340V350" pathLength="100" style="animation-delay:-2.59s;animation-duration:2.5s"/></g><g class="pads"><circle cx="140" cy="20" r="5"/><circle cx="260" cy="380" r="5"/><circle cx="14" cy="140" r="5"/><circle cx="386" cy="260" r="5"/><circle cx="50" cy="70" r="5"/><circle cx="350" cy="60" r="5"/><circle cx="60" cy="350" r="5"/><circle cx="340" cy="350" r="5"/><rect x="22" y="236" width="30" height="20" rx="3"/><rect x="348" y="140" width="28" height="20" rx="3"/></g></svg>
+      <div class="hero-core">
+        <svg class="sig" viewBox="0 0 400 40" preserveAspectRatio="none"><path d="M0 20Q25 0 50 20T100 20T150 20T200 20T250 20T300 20T350 20T400 20"/></svg>
+        <svg class="bolt" viewBox="0 0 24 24" style="color:var(--amber)"><use href="#i-bolt"/></svg>
+        <span class="volt">230V ~ 50Hz</span>
+      </div>
+      <svg class="arcs" viewBox="0 0 400 400" fill="none"><polyline/><polyline/><polyline/><polyline/></svg>
       <div class="orb o1"><i style="background:#fff6d9;color:#c98a00"><svg><use href="#i-cert"/></svg></i><div>COC issued<small>Certificate of Compliance</small></div></div>
       <div class="orb o2"><i style="background:#e3f6fd;color:#0891b2"><svg><use href="#i-drop"/></svg></i><div>Geyser fixed<small>Same-day service</small></div></div>
       <div class="orb o3"><i style="background:#e7f8ee;color:#16a34a"><svg><use href="#i-sun"/></svg></i><div>Solar online<small>5 kW hybrid system</small></div></div>
@@ -751,6 +773,18 @@ function updateBoard() {
   document.getElementById("onCount").textContent = on + " / " + N;
   document.getElementById("meter").style.width = (on / N * 72) + "%";
 }
+
+// electric arcs around the hero core
+const arcs = document.querySelectorAll(".arcs polyline");
+if (arcs.length && !matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => arcs.forEach(p => {
+  if (Math.random() < .45) { p.setAttribute("points", ""); return; }
+  const a = Math.random() * Math.PI * 2, len = 30 + Math.random() * 55, n = 7, pts = [];
+  for (let i = 0; i <= n; i++) {
+    const r = 102 + len * i / n, ang = a + (i && i < n ? (Math.random() - .5) * 16 : 0) / r;
+    pts.push((200 + Math.cos(ang) * r).toFixed(1) + "," + (200 + Math.sin(ang) * r).toFixed(1));
+  }
+  p.setAttribute("points", pts.join(" "));
+}), 110);
 
 // quote form
 const form = document.getElementById("quoteForm");
