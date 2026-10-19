@@ -492,11 +492,11 @@ footer .logo-text small{color:#86a596}
           <span class="logo-mark"><svg viewBox="0 0 48 48"><use href="#i-logo"/></svg></span>
           <span class="logo-text"><b>LV<span style="color:var(--blue)">EE</span></b><small>General Services</small></span>
         </a>
-        <p>Electrical specialists offering plumbing, electronics, security and general maintenance for homes and businesses.</p>
+        <p>Established in 2018 and 100% Black-owned. Industrial, commercial and domestic electrical contracting, plus plumbing, construction, welding and general services.</p>
       </div>
       <div><h4>Electrical</h4><ul><li><a href="services.html">Installations</a></li><li><a href="services.html">COC Certificates</a></li><li><a href="services.html">Fault finding</a></li><li><a href="services.html">Solar &amp; backup</a></li></ul></div>
       <div><h4>Other services</h4><ul><li><a href="services.html">Plumbing &amp; geysers</a></li><li><a href="services.html">CCTV &amp; alarms</a></li><li><a href="services.html">Gate motors</a></li><li><a href="services.html">Electronics</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li>Director: <span data-text="director"></span></li><li><a href="tel:" data-cfg="tel" data-text="phone"></a></li><li><a href="mailto:" data-cfg="mail" data-text="email"></a></li><li data-text="address"></li></ul></div>
+      <div><h4>Contact</h4><ul><li>Director: <span data-text="director"></span></li><li>Cell / WhatsApp: <a href="tel:" data-cfg="tel" data-text="phone"></a></li><li>Office: <a href="tel:" data-cfg="tel2" data-text="office"></a></li><li><a href="mailto:" data-cfg="mail" data-text="email"></a></li><li data-text="address"></li></ul></div>
     </div>
   </div>
   <div class="wrap f-bottom">
@@ -513,10 +513,11 @@ const CONFIG = {
   director: "Letuba Victor Ngoepe",
   phone: "068 259 6240",               // shown on site
   whatsapp: "27682596240",             // international format, no + or spaces
-  email: "info@lveegeneralservices.co.za",
-  address: "Gauteng, South Africa",
-  area: "We service Gauteng and surrounding areas.",
-  regLine: "Reg. No. 20XX/XXXXXX/07"
+  office: "083 964 9241",
+  email: "vic.ngoepe@yahoo.com",
+  address: "Unit 60C, Cnr Jack & Queen Street, Germiston CBD, 1401",
+  area: "We're based in Germiston CBD and work across Gauteng and surrounding areas.",
+  regLine: "Reg. No. 2018/428128/07 · 100% Black-owned"
 };
 /* ======================================== */
 
@@ -526,6 +527,7 @@ document.querySelectorAll("[data-text]").forEach(el => el.textContent = CONFIG[e
 document.querySelectorAll("[data-cfg]").forEach(el => {
   const k = el.dataset.cfg;
   if (k === "tel") el.href = "tel:" + CONFIG.phone.replace(/\s/g, "");
+  if (k === "tel2") el.href = "tel:" + CONFIG.office.replace(/\s/g, "");
   if (k === "mail") el.href = "mailto:" + CONFIG.email;
   if (k === "wa") { el.href = waLink("Hi LVEE, I'd like to enquire about your services."); el.target = "_blank"; el.rel = "noopener"; }
 });

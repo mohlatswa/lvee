@@ -499,7 +499,7 @@ footer .logo-text small{color:#86a596}
         <div class="ic"><svg><use href="#i-bolt"/></svg></div>
         <h3>Electrical Installations</h3>
         <p>New builds, extensions, renovations and complete rewiring, done to code by qualified electricians.</p>
-        <ul><li>House &amp; office wiring</li><li>Plugs, switches &amp; isolators</li><li>Stove, geyser &amp; pool circuits</li></ul>
+        <ul><li>House &amp; office wiring</li><li>Plugs, switches &amp; isolators</li><li>Stove &amp; geyser installation</li><li>Pool motors &amp; pumps</li></ul>
       </article>
       <article class="svc rv" data-cat="el">
         <div class="ic el"><svg><use href="#i-cert"/></svg></div>
@@ -531,6 +531,30 @@ footer .logo-text small{color:#86a596}
         <p>Three-phase installations, motor control and planned maintenance for businesses.</p>
         <ul><li>3-phase supply &amp; reticulation</li><li>Motor starters &amp; controls</li><li>Maintenance contracts</li></ul>
       </article>
+      <article class="svc rv" data-cat="el">
+        <div class="ic el"><svg><use href="#i-chip"/></svg></div>
+        <h3>Instrumentation &amp; PLC</h3>
+        <p>Industrial controls installed, wired, fault-found and commissioned.</p>
+        <ul><li>Instrumentation &amp; panel wiring</li><li>PLC fault finding</li><li>Commissioning</li><li>Temperature &amp; humidity logging</li></ul>
+      </article>
+      <article class="svc rv" data-cat="el">
+        <div class="ic el"><svg><use href="#i-search"/></svg></div>
+        <h3>Cable Jointing &amp; Fault Location</h3>
+        <p>Underground and overhead cable faults traced and repaired properly.</p>
+        <ul><li>Cable jointing &amp; terminations</li><li>Cable fault location</li><li>Earth mat laying</li></ul>
+      </article>
+      <article class="svc rv" data-cat="el">
+        <div class="ic el"><svg><use href="#i-board"/></svg></div>
+        <h3>Substation &amp; Transformer Testing</h3>
+        <p>Testing and maintenance of mini-substations and transformers.</p>
+        <ul><li>Mini-substation testing</li><li>Transformer testing</li><li>Insulation resistance &amp; ratio testing</li></ul>
+      </article>
+      <article class="svc rv" data-cat="el">
+        <div class="ic el"><svg><use href="#i-bulb"/></svg></div>
+        <h3>Street, High-Mast &amp; Emergency Lighting</h3>
+        <p>Public and site lighting installed and maintained, with surge and lightning protection.</p>
+        <ul><li>High-mast light installation</li><li>Street lighting</li><li>Emergency lighting</li><li>Surge &amp; lightning protection</li></ul>
+      </article>
     </div>
   </div>
 </section>
@@ -559,11 +583,11 @@ footer .logo-text small{color:#86a596}
           <span class="logo-mark"><svg viewBox="0 0 48 48"><use href="#i-logo"/></svg></span>
           <span class="logo-text"><b>LV<span style="color:var(--blue)">EE</span></b><small>General Services</small></span>
         </a>
-        <p>Electrical specialists offering plumbing, electronics, security and general maintenance for homes and businesses.</p>
+        <p>Established in 2018 and 100% Black-owned. Industrial, commercial and domestic electrical contracting, plus plumbing, construction, welding and general services.</p>
       </div>
       <div><h4>Electrical</h4><ul><li><a href="services.html">Installations</a></li><li><a href="services.html">COC Certificates</a></li><li><a href="services.html">Fault finding</a></li><li><a href="services.html">Solar &amp; backup</a></li></ul></div>
       <div><h4>Other services</h4><ul><li><a href="services.html">Plumbing &amp; geysers</a></li><li><a href="services.html">CCTV &amp; alarms</a></li><li><a href="services.html">Gate motors</a></li><li><a href="services.html">Electronics</a></li></ul></div>
-      <div><h4>Contact</h4><ul><li>Director: <span data-text="director"></span></li><li><a href="tel:" data-cfg="tel" data-text="phone"></a></li><li><a href="mailto:" data-cfg="mail" data-text="email"></a></li><li data-text="address"></li></ul></div>
+      <div><h4>Contact</h4><ul><li>Director: <span data-text="director"></span></li><li>Cell / WhatsApp: <a href="tel:" data-cfg="tel" data-text="phone"></a></li><li>Office: <a href="tel:" data-cfg="tel2" data-text="office"></a></li><li><a href="mailto:" data-cfg="mail" data-text="email"></a></li><li data-text="address"></li></ul></div>
     </div>
   </div>
   <div class="wrap f-bottom">
@@ -580,10 +604,11 @@ const CONFIG = {
   director: "Letuba Victor Ngoepe",
   phone: "068 259 6240",               // shown on site
   whatsapp: "27682596240",             // international format, no + or spaces
-  email: "info@lveegeneralservices.co.za",
-  address: "Gauteng, South Africa",
-  area: "We service Gauteng and surrounding areas.",
-  regLine: "Reg. No. 20XX/XXXXXX/07"
+  office: "083 964 9241",
+  email: "vic.ngoepe@yahoo.com",
+  address: "Unit 60C, Cnr Jack & Queen Street, Germiston CBD, 1401",
+  area: "We're based in Germiston CBD and work across Gauteng and surrounding areas.",
+  regLine: "Reg. No. 2018/428128/07 · 100% Black-owned"
 };
 /* ======================================== */
 
@@ -593,6 +618,7 @@ document.querySelectorAll("[data-text]").forEach(el => el.textContent = CONFIG[e
 document.querySelectorAll("[data-cfg]").forEach(el => {
   const k = el.dataset.cfg;
   if (k === "tel") el.href = "tel:" + CONFIG.phone.replace(/\s/g, "");
+  if (k === "tel2") el.href = "tel:" + CONFIG.office.replace(/\s/g, "");
   if (k === "mail") el.href = "mailto:" + CONFIG.email;
   if (k === "wa") { el.href = waLink("Hi LVEE, I'd like to enquire about your services."); el.target = "_blank"; el.rel = "noopener"; }
 });
